@@ -13,17 +13,15 @@ public class GameBoard {
         return rows;
     }
 
-    private GameBoard(int rows, int cols){
-       this.instance=GameBoard.getInstance(rows,cols);
-         this.rows = rows;
-         this.cols = cols;
-   }
+    private GameBoard(int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
+    }
 
-    public static GameBoard getInstance(int rows, int cols){
-         if(instance==null){
-              instance=new GameBoard(rows,cols);
-         }
-         return instance;
+    public static GameBoard getInstance(int rows, int cols) {
+        if (instance == null) {
+            instance = new GameBoard(rows, cols);
+        }
+        return instance;
     }
 }
-
